@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    id="www.ubicalo.app"
+    version="0.0.1">
+
+    <name>ubicalo</name>
+
+    <description>
+        Aplicación oficial de Ubicalo.
+    </description>
+
+    <author email="maironsoft@gmail.com" href="http://sofenix.co">
+    IdeArriba
+    </author>
+
+    <icon src="images/icon.png" />
+
+    <feature name="http://api.phonegap.com/1.0/notification" />
+
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="org.apache.cordova.dialogs" spec="0.3.0" source="pgb" />
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+</widget>
