@@ -87,7 +87,7 @@ function onDeviceReady() {
 function checkConnection() {
     var networkState = navigator.connection.type;
 
-    if(networkState=Connection.NONE){
+    if(networkState==Connection.NONE){
         window.open("sin-conexion.html");
     }
 }
