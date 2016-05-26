@@ -51,7 +51,7 @@ var app = {
 
 $(document).ready(function(){
     var ua = $.browser; /* Create a variable for browser info */
-    $('.contenedor').hide(); /* Hide the content */
+    $('.contenedor, #header').hide(); /* Hide the content */
 
     /* If the Version or Firefox is < or = 5.0 the preloader not display, 
         the same function applies to old Version Safari and Chrome
@@ -62,12 +62,12 @@ $(document).ready(function(){
     }
     else {  /* Otherwise appears the preloader */
         /* Insert the markup preloader usign jQuery */
-        $('body').append('<div id="logo-preload"><img scr="img/logo.png"></div><div class="loader" id="loader">Loading...</div>');
+        //$('body').append('<div id="logo-preload"><img scr="img/logo.png"></div><div class="loader" id="loader">Loading...</div>');
         /* The animation during 2sec, 
                 change the delay parameter to extend or decrase the animation, 
                 remember to change the duration of the animation also in CSS */
         $('#loader, #logo-preload').delay(2000).fadeOut('slow', function() {
-            $('.contenedor').fadeIn('fast');  
+            $('.contenedor, #header').fadeIn('fast');  
         });     
     }  
 

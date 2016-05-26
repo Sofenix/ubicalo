@@ -27,25 +27,33 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#C0C0C0;
+    background-color:#C0C0C0 !important;
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
+    font-size:12px ;
+    height:100% !important;
+    margin:0px !important;
+    padding:0px !important;
+    width:100% !important;
 }
 
 /* Portrait layout (default) */
 .app {
-    height:100%;                   /* text area height */
+    height:calc(100% - 42px);                   /* text area height */
     width:100%;                   /* text area width */
     text-align:center;
-    padding:0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    padding:0px !important;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:0px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
+}
+
+#pageone{
+  height: 100%;
+  background: #c0c0c0;
+}
+
+#header{
+  border: none !important;
 }
 
 /* Landscape layout (with min-width)
@@ -105,6 +113,17 @@ h1 {
 
 
 
+.ui-header .ui-title, .ui-footer .ui-title {
+    margin: 0 10% !important;
+}
+
+.ui-popup-screen.in {
+    opacity: .7 !important;
+    filter: Alpha(Opacity=50) !important;
+    background: #000 !important;
+}
+
+
 
 /* codigo del preload */
 
@@ -112,6 +131,7 @@ h1 {
     position: absolute;
     top: 100px;
     left: calc(50% - 150px);
+    height: 100%;
 }
 
 #logo-preload img{

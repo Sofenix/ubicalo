@@ -29,28 +29,20 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        
+         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/sin-conexion.css" />
         <title>Ubicalo App</title>
-    </head>
-    <body>
-        <div class="contenedor-sin-conexion">
-            <img id="logo-sin-conexion" scr="img/logo.png" />
-            <br>
-            <h2> No tienes conexión a Internet</h2>
-            <p>Para consultar nuestro directorio necesitas conexión a internet.</p>
-            <p>Ubicalo es el directorio de paginas amarillas mas completo y actualizado, al alcance de un click. Sus clientes están en la web. <br> <h3>¿Donde esta su publicidad? </h3> </p>
-
-            <button id="btn-intentar" onclick="intentar()"> Intentar de nuevo </button>
-        </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
         <script type="text/javascript">
             function intentar(){
                 window.open("index.html");
             }
 
-            setInterval('checkConnection()',3000);
+            setInterval('checkConnection()',2000);
 
             function checkConnection() {
                 var networkState = navigator.connection.type;
@@ -59,6 +51,61 @@
                     window.open("index.html");
                 }
             }
+            $(document).ready(function(){
+                $("#home").click(function(){
+                    window.open("index.html");
+                });
+
+                $("#salir").click(function(){
+                    navigator.app.exitApp();
+                });
+
+                $("#atras").click(function(){
+                    navigator.app.backHistory();
+                });
+                
+            });
         </script>
+
+    </head>
+    <body>
+        <div data-role="page" id="pageone">
+            <div data-role="footer" id="header" data-theme="b">
+              <div data-role="navbar" >
+                <ul>
+                  <li><a id="atras" class="ui-btn ui-icon-carat-l ui-btn-icon-left" style="padding: 5px !important;"><img src="res/icon/android/icon-36-ldpi.png"  height="26"> </a></li>
+                  <li><a id="home" class="ui-icon-home ui-btn-icon-top"></a></li>
+                  <li><a href="#dialogPage"  data-rel="popup" data-position-to="window" data-transition="pop" class="ui-icon-info ui-btn-icon-top"></a></li>
+                  <li><a id="salir" class="ui-icon-delete ui-btn-icon-top"></a></li>
+                </ul>
+              </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+            <div date-role="main" class="contenedor-sin-conexion ui-content">
+                <img id="logo-sin-conexion" scr="img/logo.png" />
+                <br>
+                <h1> No tienes conexión a Internet</h1>
+                <p>Para consultar nuestro directorio necesitas conexión a internet.</p>
+                <p>Ubicalo es el directorio de paginas amarillas mas completo y actualizado, al alcance de un click. Sus clientes están en la web. <br> <h3>¿Donde esta su publicidad? </h3> </p>
+
+                <button id="btn-intentar" onclick="intentar()"> Intentar de nuevo </button>
+            </div>
+
+            <div data-role="popup" id="dialogPage" data-theme="b" data-dismissible="true">
+              <div data-role="header">
+                <a role="button" data-rel="back" href="#" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+                <h2><img src="res/icon/android/icon-36-ldpi.png"  height="26"> Sobre Ubicalo App</h2>
+              </div>
+              <div role="main" class="ui-content">
+                <p>Ubicalo App es la aplicación movil del directorio virtual www.ubicalo.com</p>
+                <p>Versión 1.0</p>
+                <p>Desarrollado por <a target="_blank" href="www.sofenix.co">Sofenix</a></p>
+                <p>Copyright 2016</p>
+                <hr>
+                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-center ui-btn-b" data-rel="back">Aceptar</a>                
+              </div>
+            </div>
+        </div>
+        
     </body>
 </html>
