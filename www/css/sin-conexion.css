@@ -82,6 +82,11 @@ body {
     cursor: pointer;
 }
 
+.ui-mini.ui-btn-icon-left:after, .ui-mini .ui-btn-icon-left:after, .ui-header .ui-btn-icon-left:after, .ui-footer .ui-btn-icon-left:after {
+    left: .37em;
+    margin-left: 10px !important;
+}
+
 
 /* Landscape layout (with min-width)
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {

@@ -123,11 +123,10 @@ h1 {
     background: #000 !important;
 }
 
-#atras img{
-    background: url('../res/icon/android/icon-36-ldpi.png') !important;
-    background-size: 300px 127px !important; 
+.ui-mini.ui-btn-icon-left:after, .ui-mini .ui-btn-icon-left:after, .ui-header .ui-btn-icon-left:after, .ui-footer .ui-btn-icon-left:after {
+    left: .37em;
+    margin-left: 10px !important;
 }
-
 
 /* codigo del preload */
 
