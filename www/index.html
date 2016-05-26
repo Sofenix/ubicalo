@@ -45,13 +45,17 @@
                 $("#salir").click(function(){
                     navigator.app.exitApp();
                 });
+
+                $("#home").click(function(){
+                    window.open("index.html");
+                });
                 
             });
 
             //Salir de la app cuando está en el menú principal
-            document.addEventListener("backbutton", function() {
+            /*document.addEventListener("backbutton", function() {
               navigator.app.exitApp();
-            }, false);
+            }, false);*/
         </script>
 
         <title>Ubicalo App</title>

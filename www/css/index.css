@@ -123,6 +123,10 @@ h1 {
     background: #000 !important;
 }
 
+#atras img{
+    background: url('../res/icon/android/icon-36-ldpi.png') !important;
+    background-size: 300px 127px !important; 
+}
 
 
 /* codigo del preload */
