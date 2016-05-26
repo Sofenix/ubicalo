@@ -40,8 +40,15 @@
             <h2> No tienes conexión a Internet</h2>
             <p>Para consultar nuestro directorio necesitas conexión a internet.</p>
             <p>Ubicalo es el directorio de paginas amarillas mas completo y actualizado, al alcance de un click. Sus clientes están en la web. <br> <h3>¿Donde esta su publicidad? </h3> </p>
+
+            <button id="btn-intentar" onclick="intentar()"> Intentar de nuevo </button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript">
+            function intentar(){
+                window.open("index.html");
+            }
+        </script>
     </body>
 </html>
