@@ -113,3 +113,59 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+
+
+
+/* codigo del preload */
+
+#preloader {
+    width: 100%;
+    height: 5px;
+    background: #000;
+    top: 50%;
+    position: absolute;
+}
+
+#preloader img{
+    width: 240px;
+    height: 80px;
+    z-index: 999999;
+    position: absolute;
+    top: -100px;
+    margin-left: -120px;
+    background: url('../img/logo.png') !important;
+}
+
+.expand {
+    width: 100%;
+    height: 1px;
+    margin: 2px 0;
+    background: #2187e7;
+    position: absolute;
+    box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.7);
+    -moz-animation: fullexpand 2000ms cubic-bezier(1.000, 0.610, 0.970, 0.000);
+    /* Set the duration of the animation */
+    -webkit-animation: fullexpand 2000ms cubic-bezier(1.000, 0.610, 0.970, 0.000);
+}
+
+@-moz-keyframes fullexpand {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    };
+}
+
+@-webkit-keyframes fullexpand {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    };
+}
