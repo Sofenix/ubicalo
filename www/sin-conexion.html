@@ -49,6 +49,16 @@
             function intentar(){
                 window.open("index.html");
             }
+
+            setInterval('checkConnection()',3000);
+
+            function checkConnection() {
+                var networkState = navigator.connection.type;
+
+                if(networkState!=Connection.NONE){
+                    window.open("index.html");
+                }
+            }
         </script>
     </body>
 </html>

@@ -71,6 +71,9 @@ $(document).ready(function(){
         });     
     }  
 
+    $("#ventana").load(function (){
+        checkConnection()
+    });
 
 });
 
@@ -91,3 +94,4 @@ function checkConnection() {
         window.open("sin-conexion.html");
     }
 }
+
