@@ -31,6 +31,12 @@ body {
     text-shadow: 0 1px 0 #FDCC00!important;
 }
 
+.ui-page-theme-b #atras.ui-btn.ui-btn-active, html .ui-bar-b #atras.ui-btn.ui-btn-active, html .ui-body-b #atras.ui-btn.ui-btn-active, html body .ui-group-theme-b #atras.ui-btn.ui-btn-active, html head+body #atras.ui-btn.ui-btn-b.ui-btn-active, .ui-page-theme-b .ui-slider-track #atras.ui-btn-active, html .ui-bar-b .ui-slider-track #atras.ui-btn-active, html .ui-body-b .ui-slider-track #atras.ui-btn-active, html body .ui-group-theme-b .ui-slider-track #atras.ui-btn-active, html body div.ui-slider-track.ui-body-b #atras.ui-btn-active {
+    background-color: #333!important;
+    border-color: #333!important;
+    text-shadow: 0 1px 0 #333!important;
+}
+
 #pageone{
   height: 100%;
   background: #c0c0c0;
