@@ -27,7 +27,8 @@ body {
 /* Portrait layout (default) */
 .app {
     height:calc(100% - 42px);                   /* text area height */
-    width:100%;                   /* text area width */
+    width:100%;  
+    overflow-y: hidden;                 /* text area width */
     text-align:center;
     padding:0px !important;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:0px;  /* offset vertical: half of image height and text area height */
@@ -138,7 +139,6 @@ h1 {
     position: absolute;
     top: 100px;
     left: calc(50% - 150px);
-    height: 100%;
 }
 
 #logo-preload img{
@@ -169,7 +169,7 @@ h1 {
 }
 .loader {
   text-indent: -9999em;
-  margin: 70% auto 0;
+  margin: 30px auto 0;
   position: relative;
   font-size: 11px;
   -webkit-animation-delay: 0.16s;
