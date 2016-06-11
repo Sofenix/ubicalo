@@ -53,9 +53,11 @@ $(document).ready(function(){
     var ua = $.browser; /* Create a variable for browser info */
     $('.contenedor, #header').hide(); /* Hide the content */
 
-    $('#logo-preload').delay(2000).fadeOut('slow', function() {
-        $('.contenedor, #header').fadeIn('fast');  
-    });  
+     window.onload = function() {
+        $('#logo-preload').delay(100).fadeOut('slow', function() {
+            $('.contenedor, #header').fadeIn('fast');  
+        });  
+    }
 
     $("#ventana").load(function (){
         //checkConnection()

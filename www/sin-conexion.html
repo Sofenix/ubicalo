@@ -18,41 +18,7 @@
          <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/sin-conexion.css" />
         <title>Ubicalo App</title>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-        <script type="text/javascript">
-            function intentar(){
-                window.open("index.html");
-            }
-
-            setInterval('checkConnection()',2000);
-
-            function checkConnection() {
-                var networkState = navigator.connection.type;
-
-                if(networkState!=Connection.NONE){
-                    window.open("index.html");
-                }
-            }
-
-            $(document).ready(function(){
-                $("#home").click(function(){
-                    window.open("index.html");
-                });
-
-                $("#salir").click(function(){
-                    navigator.app.exitApp();
-                });
-
-                $("#atras").click(function(){
-                    window.history.back();
-                });
-            });
-            
-        </script>
+        
 
     </head>
     <body>
@@ -92,6 +58,40 @@
               </div>
             </div>
         </div>
-        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript">
+            function intentar(){
+                window.open("index.html");
+            }
+
+            setInterval('checkConnection()',1000);
+
+            function checkConnection() {
+                var networkState = navigator.connection.type;
+
+                if(networkState!=Connection.NONE){
+                    window.open("index.html");
+                }
+            }
+
+            $(document).ready(function(){
+                $("#home").click(function(){
+                    window.open("index.html");
+                });
+
+                $("#salir").click(function(){
+                    navigator.app.exitApp();
+                });
+
+                $("#atras").click(function(){
+                    window.history.back();
+                });
+            });
+            
+        </script>
     </body>
 </html>

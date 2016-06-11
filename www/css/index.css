@@ -59,6 +59,11 @@ body {
 
 #header{
   border: none !important;
+  display: none;
+}
+
+.contenedor{
+  display: none;
 }
 
 /* Landscape layout (with min-width)

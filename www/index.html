@@ -16,35 +16,7 @@
         <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="js/jquery-1.11.1.min.js"></script>
-
-        <script src="js/jquery.mobile.custom.min.js"></script>
-        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-            $(document).ready(function(){
-
-                $("#salir").click(function(){
-                    navigator.app.exitApp();
-                });
-
-                $("#home").click(function(){
-                    window.open("index.html");
-                });
-
-                $("#atras").click(function(){
-                    window.history.back();
-                });
-                
-            });
-
-            //Salir de la app cuando está en el menú principal
-            /*document.addEventListener("backbutton", function() {
-              navigator.app.exitApp();
-            }, false);*/
-        </script>
+        
 
         <title>Ubicalo App</title>
     </head>
@@ -82,6 +54,34 @@
         
         </div>
         
-        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+            $(document).ready(function(){
+
+                $("#salir").click(function(){
+                    navigator.app.exitApp();
+                });
+
+                $("#home").click(function(){
+                    window.open("index.html");
+                });
+
+                $("#atras").click(function(){
+                    window.history.back();
+                });
+                
+            });
+
+            //Salir de la app cuando está en el menú principal
+            /*document.addEventListener("backbutton", function() {
+              navigator.app.exitApp();
+            }, false);*/
+        </script>
     </body>
 </html>
