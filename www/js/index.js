@@ -48,28 +48,6 @@ var app = {
     }
 };
 
-
-$(document).ready(function(){
-    var ua = $.browser; /* Create a variable for browser info */
-    $('.contenedor, #header').hide(); /* Hide the content */
-
-    window.onload = function() {
-        onDeviceReady()
-    }
-
-    $("#ventana").load(function (){
-        onDeviceReady()
-        
-        $('#logo-preload').delay(100).fadeOut('slow', function() {
-            $('.contenedor, #header, #dialogPa').fadeIn('fast');  
-        }); 
-        
-    });
-
-
-
-});
-
 // Wait for device API libraries to load
 //
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -87,4 +65,28 @@ function checkConnection() {
         window.open("sin-conexion.html");
     }
 }
+
+
+
+$(document).ready(function(){
+    var ua = $.browser; /* Create a variable for browser info */
+    $('.contenedor, #header').hide(); /* Hide the content */
+
+    window.onload = function() {
+        app.onDeviceReady()
+    }
+
+    $("#ventana").load(function (){
+        app.onDeviceReady()
+
+        $('#logo-preload').delay(100).fadeOut('slow', function() {
+            $('.contenedor, #header, #dialogPa').fadeIn('fast');  
+        }); 
+        
+    });
+
+
+
+});
+
 
