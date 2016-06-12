@@ -73,11 +73,11 @@ $(document).ready(function(){
     $('.contenedor, #header').hide(); /* Hide the content */
 
     window.onload = function() {
-        app.onDeviceReady()
+        onDeviceReady()
     }
 
     $("#ventana").load(function (){
-        app.onDeviceReady()
+        onDeviceReady()
 
         $('#logo-preload').delay(100).fadeOut('slow', function() {
             $('.contenedor, #header, #dialogPa').fadeIn('fast');  
