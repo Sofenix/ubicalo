@@ -54,13 +54,15 @@ $(document).ready(function(){
     $('.contenedor, #header').hide(); /* Hide the content */
 
     window.onload = function() {
+        checkConnection();
     }
 
     $("#ventana").load(function (){
+        checkConnection();
         $('#logo-preload').delay(100).fadeOut('slow', function() {
             $('.contenedor, #header').fadeIn('fast');  
         }); 
-        checkConnection();
+        
     });
 
 
