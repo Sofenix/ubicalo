@@ -51,14 +51,15 @@ var app = {
 
 $(document).ready(function(){
     var ua = $.browser; /* Create a variable for browser info */
-    $('.contenedor, #header, #dialogPage').hide(); /* Hide the content */
+    $('.contenedor, #header').hide(); /* Hide the content */
 
     window.onload = function() {
-        checkConnection();
+        onDeviceReady()
     }
 
     $("#ventana").load(function (){
-        checkConnection();
+        onDeviceReady()
+        
         $('#logo-preload').delay(100).fadeOut('slow', function() {
             $('.contenedor, #header, #dialogPa').fadeIn('fast');  
         }); 
