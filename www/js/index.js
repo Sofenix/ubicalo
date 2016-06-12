@@ -60,7 +60,7 @@ $(document).ready(function(){
         $('#logo-preload').delay(100).fadeOut('slow', function() {
             $('.contenedor, #header').fadeIn('fast');  
         }); 
-        //checkConnection();
+        checkConnection();
     });
 
 
