@@ -54,13 +54,13 @@ $(document).ready(function(){
     $('.contenedor, #header, #dialogPage').hide(); /* Hide the content */
 
     window.onload = function() {
-        //checkConnection();
+        checkConnection();
     }
 
     $("#ventana").load(function (){
-        //checkConnection();
+        checkConnection();
         $('#logo-preload').delay(100).fadeOut('slow', function() {
-            $('.contenedor, #header, #dialogPage').fadeIn('fast');  
+            $('.contenedor, #header, #dialogPa').fadeIn('fast');  
         }); 
         
     });
