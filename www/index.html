@@ -36,7 +36,7 @@
             <div id="logo-preload"><img scr="img/logo.png"><div class="loader" id="loader">Loading...</div></div>
 
             <div date-role="main" class="app contenedor ui-content">
-                <iframe id="ventana" frameborder="0" style="width:100%; height:100%;" src="http://www.ubicalo.com?ver=1.0"> </iframe>
+                <iframe id="ventana" frameborder="0" style="width:100%; height:100%;"> </iframe>
             </div>
             <div data-role="popup" id="dialogPage" data-theme="b" data-dismissible="true">
               <div data-role="header">
@@ -75,6 +75,12 @@
                 $("#atras").click(function(){
                     window.history.back();
                 });
+
+                var time = Math.random();
+                var url="http://www.ubicalo.com?time='"+time+"'";
+
+                $('#ventana').attr('src', url);
+                //$('#ventana').reload();
                 
             });
 

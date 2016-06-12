@@ -53,15 +53,17 @@ $(document).ready(function(){
     var ua = $.browser; /* Create a variable for browser info */
     $('.contenedor, #header').hide(); /* Hide the content */
 
-     window.onload = function() {
-        $('#logo-preload').delay(100).fadeOut('slow', function() {
-            $('.contenedor, #header').fadeIn('fast');  
-        });  
+    window.onload = function() {
     }
 
     $("#ventana").load(function (){
-        //checkConnection()
+        $('#logo-preload').delay(100).fadeOut('slow', function() {
+            $('.contenedor, #header').fadeIn('fast');  
+        }); 
+        //checkConnection();
     });
+
+
 
 });
 
