@@ -57,7 +57,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 //
 function onDeviceReady() {
     checkConnection();
-    navigator.splashscreen.hide();
 }
 
 function checkConnection() {
