@@ -73,16 +73,14 @@ $(document).ready(function(){
     $('.contenedor, #header').hide(); /* Hide the content */
 
     window.onload = function() {
-        onDeviceReady();
+        //onDeviceReady();
     }
 
     $("#ventana").load(function (){
-        onDeviceReady();
-
-        $('#logo-preload').delay(100).fadeOut('slow', function() {
+        $('#logo-preload').delay(100).fadeOut('fast', function() {
             $('.contenedor, #header, #dialogPage').fadeIn('fast');  
         }); 
-        
+        onDeviceReady();
     });
 
 
