@@ -53,6 +53,7 @@ var app = {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 // device APIs are available
+navigator.splashscreen.hide()
 //
 function onDeviceReady() {
     checkConnection();
@@ -80,7 +81,7 @@ $(document).ready(function(){
         $('#logo-preload').delay(100).fadeOut('fast', function() {
             $('.contenedor, #header, #dialogPage').fadeIn('fast');  
         }); 
-        //onDeviceReady();
+        onDeviceReady();
     });
 
 
