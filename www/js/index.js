@@ -37,14 +37,14 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
+        /*var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id);*/
     }
 };
 
@@ -69,7 +69,7 @@ function checkConnection() {
 
 
 $(document).ready(function(){
-    var ua = $.browser; /* Create a variable for browser info */
+    
     $('.contenedor, #header').hide(); /* Hide the content */
 
     window.onload = function() {
@@ -80,7 +80,7 @@ $(document).ready(function(){
         $('#logo-preload').delay(100).fadeOut('fast', function() {
             $('.contenedor, #header, #dialogPage').fadeIn('fast');  
         }); 
-        onDeviceReady();
+        //onDeviceReady();
     });
 
 
