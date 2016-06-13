@@ -57,7 +57,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 //
 function onDeviceReady() {
     checkConnection();
-    
+    navigator.splashscreen.hide();
 }
 
 function checkConnection() {
@@ -68,7 +68,7 @@ function checkConnection() {
     }
 }
 
-navigator.splashscreen.hide();
+
 
 $(document).ready(function(){
     
