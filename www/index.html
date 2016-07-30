@@ -25,7 +25,7 @@
     <body>
         <div data-role="page" id="pageone">
             <div data-role="footer" id="header" data-theme="b">
-              <div data-role="navbar" >
+              <div id="navbar-header" data-role="navbar" >
                 <ul>
                   <li><a id="atras" class="ui-btn ui-icon-carat-l ui-btn-icon-left" style="padding: 5px !important;"><img src="img/ico.png"  height="25"> </a></li>
                   <li><a id="home" class="ui-icon-home ui-btn-icon-top"></a></li>
@@ -73,7 +73,9 @@
                 });
 
                 $("#home").click(function(){
-                    window.open("index.html");
+                     var time = Math.random();
+                    var url="http://www.ubicalo.com?time='"+time+"'";
+                    $('#ventana').attr('src', url);
                 });
 
                 $("#atras").click(function(){
@@ -82,6 +84,10 @@
 
                 var time = Math.random();
                 var url="http://www.ubicalo.com?time='"+time+"'";
+
+                $('#logo-preload').css("left", ($(window).width()/2)-150);
+
+                $('#ventana').height($(window).height()-$("#navbar-header").height());
 
                 $('#ventana').attr('src', url);
                 //$('#ventana').reload();
