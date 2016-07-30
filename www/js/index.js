@@ -79,7 +79,12 @@ $(document).ready(function(){
 
     $("#ventana").load(function (){
         $('#logo-preload').delay(100).fadeOut('fast', function() {
-            $('.contenedor, #header, #dialogPage').fadeIn('fast');  
+            $('.contenedor, #header, #dialogPage').fadeIn('fast'); 
+            $('#ventana').height($(window).height()-$("#navbar-header").height());
+
+            $(window).resize(function() {
+                $('#ventana').height($(window).height()-$("#navbar-header").height());
+            }); 
         }); 
         checkConnection();
     });
